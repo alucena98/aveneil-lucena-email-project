@@ -11,14 +11,23 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-md-3 nav-column">
-            <div>
+
+        <div class="topnav"> <!-- Top navigation bar -->
+            <a class="active" href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+          </div>
+
+        <div class="col col-md-2 nav-column"> <!-- Sidebar Column-->
+            <div> <!-- Avatar div-->
                 <img class="avatar" 
                     src="https://static.wikia.nocookie.net/enajoelg/images/e/ea/Ena_talking.gif"
                     alt="ena"> 
                 <mark id="welcome">Welcome, Neil.</mark>
             </div>
-            <!-- Dropdown menu on minimum width -->
+
+            <!-- Dropdown menu on minimum width, shows burger menu -->
             <button class="btn d-md-none" id="toggle-button" type="button" data-toggle="collapse" data-target="#bd-docs-nav" 
             aria-controls="bd-docs-nav" aria-expanded="false" aria-label="toggle-nav-bar">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="40" height="40" focusable="false">
@@ -28,17 +37,17 @@
                 </svg>
             </button>
             
-            <!-- First Column-->
+            <!-- First Column contents-->
             <nav class="show-and-hide-nav collapse" id="bd-docs-nav">
-            <div class="first-column-inbox">
+            <div class="first-column-inbox" id="profile-inbox" tabindex="0">
                 <button id="compose">Compose
                     <img class="pen" src="pen-icon.svg"
                     alt="pen">
                 </button>
                     <h1 id="sidebar">Inbox</h1>
-                        <h2 id="quantity">1,234</h2>
+                        <h2 id="quantity">999+</h2>
                     <h1 id="sidebar">Tagged</h1>
-                        <h2 id="quantity">3</h2>
+                        <h2 id="quantity">0</h2>
                     <h1 id="sidebar">Important</h1>
                         <h2 id="quantity">5</h2>
                     <h1 id="sidebar">Sent</h1>
@@ -52,12 +61,12 @@
         </div>
 
         <!-- Second Column-->
-        <div class="col-md-3 inbox-column">
+        <div class="col-md-4 inbox-column">
             <div class="search-bar">
                 <input type="text" class="search-bar" 
                 placeholder="Search mail..." aria-label="">
                 <img class="search" src="search-icon.svg" alt="search">
-                
+            </div>                
 
                 <div class="inbox-message-ur" id="message">Google Alert
                 <br>An unknown user has tried to access your account.</div>
@@ -71,11 +80,11 @@
             </div>
             <hr>
 
-            </div>
+
         </div>
 
         <!-- Third Column-->
-        <div class="col-sm-2 col-md-6 email-column">
+        <div class="col-sm-12 col-md-6 email-column">
             <div class="sent-to" id="sentTo">
                 To: me@email.com
             </div>
