@@ -6,58 +6,93 @@ button {
 }
 /* Header navigation bar*/
 .topnav {
-    background-color: #333;
+    background-color: #131f63;
     overflow: hidden;
-  }
-  
+    width: 100%;
+    display: flex;
+    }
+
+.usercontent {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+/* User profile pic */
+.avatar { 
+    display: flex;
+    object-fit: scale-down;
+    border-radius: 35%;
+    background-color: rgb(255, 255, 255);
+    width: 35px;
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    outline: #4ea8fc solid 3px;
+    cursor: pointer;
+    }
+    
+#welcome {
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+    /*Changes welcome message color*/
+    mark {
+        background-color: rgb(48, 110, 192);
+        text-shadow: 0px 2px #0d2b50;
+        border-radius: 15px;
+        color: white;
+    }
+
   /* Style the links inside the navigation bar */
-  .topnav a {
+.topnav a {
     float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-  }
-  
+    }
+
   /* Change the color of links on hover */
-  .topnav a:hover {
+.topnav a:hover {
     background-color: #ddd;
-    color: black;
-  }
-  
+    color: rgb(13, 21, 48);
+    border-radius: 15px;
+    }
+
   /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #04AA6D;
+.topnav a.active {
+    background-color: #5e82b8;
     color: white;
-  }
+    border-radius: 15px;
+    font-weight: bold;
+    text-shadow: 0px 1px 3px #000000;
+}
 
 /*First Column*/
-    #welcome {
-        display: flex;
-        justify-content:center;
-        font-size: 20px;
-        width: 65%;
+    .first-column-inbox {
+        height: 94.1vh;
+        max-height: 100%;
     }
     .show-and-hide-nav {
         display: block!important;
         font-size: 1px;
     }
 
-    /*Changes welcome message color*/
-    mark {
-        background-color: rgb(131, 156, 236);
-        border-radius: 15px;
-    }
-
-    /* Compose button */
+    /* Modifies buttons */
     button {
         align-items: center;
         background-color: #689dec;
-        box-shadow: 3px 3px black;
+        background-image: linear-gradient(rgb(13, 21, 48), rgb(89, 128, 255));
+        box-shadow: 0px 4px 4px rgb(0, 18, 97);
         font-style: 'Lucida Sans';
         border: transparent;
-        border-radius: 6px;
         color: #ffffff; /* Text color inside button */
         text-align: center;
         font-size: 20px;
@@ -65,6 +100,10 @@ button {
         margin: 15px;
         width: 135px;
         transition: 0.25s ease-in-out;
+    }
+    #compose {
+        width: 80%;
+        margin-right: 25px;
     }
     button:hover {
         background-color: #89afe9;
@@ -76,18 +115,6 @@ button {
             outline: transparent;
     }
 
-    /* User profile pic */
-    .avatar { 
-        object-fit: scale-down;
-        border-radius: 50%;
-        background-color: rgb(255, 255, 255);
-        width: 35px;
-        height: 35px;
-        margin-top: 5px;
-        margin-left: 5px;
-        margin-right: 10px;
-        outline: #75d3ff solid 2px;
-        }
     .pen {
     margin-top: -5px;
     background: transparent;
@@ -103,6 +130,7 @@ button {
         padding: 5px;
         color: white;
         display: flex;
+        text-shadow: 0px 2px 3px #000000;
         
     }
     #quantity {
@@ -117,11 +145,13 @@ button {
 
     #sidebar:hover, #sidebar:active {
         position: relative;
-        background-color: rgb(106, 141, 255);
+        background-color: rgba(184, 183, 255, 0.356);
         color: rgb(255, 255, 255);
         transition: 0.2s ease-in-out;
         border-top-right-radius: 10px 10px;
+        border-top-left-radius: 10px 10px;
         border-bottom-right-radius: 10px 10px;
+        border-bottom-left-radius: 10px 10px;
 
     }
     #sidebar:active  {
@@ -134,14 +164,9 @@ button {
     justify-content: right;
     background-color: rgb(38, 61, 134);
     background-image: linear-gradient(rgb(61, 99, 224), rgb(13, 21, 48));
-    height: 100vh;
-    width: 100vh;
     }
 
     #sidebar {
-        cursor: pointer;
-    }
-    #message {
         cursor: pointer;
     }
 
@@ -182,34 +207,36 @@ button {
     .email-column {
         background-color: rgba(95, 140, 224, 0.418);
         background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(91, 120, 177, 0.85));
-        height: 100vh;
-        width: 200vh;
-        border-left: 1px solid rgb(113, 100, 158); 
+        border-left: 1px solid rgb(0, 24, 104); 
     }
     /* Buttons to reply or save a draft for an email*/
-    .inbox-button {
-        display: center;
-        background-color: #6a6ce4;
+    .message-button {
+        display: row;
+        background-color: #3463e4;
+        background-image: linear-gradient(rgba(70, 143, 252, 0.55), rgba(23, 68, 158, 0.85));
+        border-radius: 0px;
         font-weight: bold;
         border: transparent;
-        border-radius: 15px;
         color: #ffffff; /* Text color inside button */
         text-align: center;
-        font-size: 15px;
+        font-size: 16px;
         padding: 10px;
         margin: 5px;
         width: 100px;
         transition: background 0.15s ease-in-out;
     }
-
-    .inbox-button:hover {
+    #discard {
+        display: row;
+    }
+    .message-button:hover {
         background-color: rgb(102, 94, 209);
         transition: background 0.15s ease-in-out;
     }
 
-    .inbox-button:focus {
+    .message-button:focus {
         outline: none;
     }
+
     #time {
         display: flex;
         justify-content: end;
@@ -235,14 +262,12 @@ button {
 
     /*Email title on select */
     .inbox-title-ur {
-        font-size: 25px;
-        font-weight: bold;
+        font-weight: bolder;
     }
     /*Email in inbox that is unread*/
     .inbox-message-ur {
-        font-size: 13px;
         font-weight: bold;
-        background-color: rgb(123, 184, 235);
+        background-color: rgba(124, 181, 228, 0.712);
         border-radius: 5px;
         padding: 4px;
     }
@@ -254,12 +279,10 @@ button {
     /*Email that has been read*/
     .read-email {
         background-color: transparent;
-    }
-    .inbox-message-r {
-        font-size: 12px;
-        font-style: Lighter;
+        font-size: 18px;
+        font-style: bold;
         color:rgb(26, 26, 26);
-        background-color: transparent
+        background-color: transparent;
     }
     .inbox-message-r:hover {
         background-color: rgb(104, 163, 219);
