@@ -14,13 +14,13 @@
         <div class="col-12 col-md-3 nav-column">
             <div>
                 <img class="avatar" 
-                    src="https://static.wikia.nocookie.net/enajoelg/images/e/ea/Ena_talking.gif/revision/latest?cb=20220527174213"
+                    src="https://static.wikia.nocookie.net/enajoelg/images/e/ea/Ena_talking.gif"
                     alt="ena"> 
                 <mark id="welcome">Welcome, Neil.</mark>
             </div>
             <!-- Dropdown menu on minimum width -->
-            <button class="btn d-md-none" type="button" data-toggle="collapse" data-target="#bd-docs-nav" 
-            aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle nav bar">
+            <button class="btn d-md-none" id="toggle-button" type="button" data-toggle="collapse" data-target="#bd-docs-nav" 
+            aria-controls="bd-docs-nav" aria-expanded="false" aria-label="toggle-nav-bar">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="40" height="40" focusable="false">
                     <title>Menu</title>
                     <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22">     
@@ -30,26 +30,34 @@
             
             <!-- First Column-->
             <nav class="show-and-hide-nav collapse" id="bd-docs-nav">
-              <div>
+            <div class="first-column-inbox">
                 <button id="compose">Compose
-                <img class="pen" src="pen-icon.svg"
-                alt="pen">
+                    <img class="pen" src="pen-icon.svg"
+                    alt="pen">
                 </button>
-              <h1 id="sidebar">Inbox (1)</h1>
-              <h1 id="sidebar">Tagged</h1>
-              <h1 id="sidebar">Important</h1>
-              <h1 id="sidebar">Sent</h1>
-              <h1 id="sidebar">Drafts</h1>
-              <h1 id="sidebar">Trash</h1>
+                    <h1 id="sidebar">Inbox</h1>
+                        <h2 id="quantity">1,234</h2>
+                    <h1 id="sidebar">Tagged</h1>
+                        <h2 id="quantity">3</h2>
+                    <h1 id="sidebar">Important</h1>
+                        <h2 id="quantity">5</h2>
+                    <h1 id="sidebar">Sent</h1>
+                        <h2 id="quantity">14</h2>
+                    <h1 id="sidebar">Drafts</h1>
+                        <h2 id="quantity">14</h2>
+                    <h1 id="sidebar">Trash</h1>
+                        <h2 id="quantity">374</h2>
             </div>
             </nav>
         </div>
 
         <!-- Second Column-->
         <div class="col-md-3 inbox-column">
-            <div>
+            <div class="search-bar">
                 <input type="text" class="search-bar" 
-                placeholder="Search mail" aria-label="">
+                placeholder="Search mail..." aria-label="">
+                <img class="search" src="search-icon.svg" alt="search">
+                
 
                 <div class="inbox-message-ur" id="message">Google Alert
                 <br>An unknown user has tried to access your account.</div>
@@ -102,7 +110,6 @@
             <textarea style="width: 100%; height: 30%;" placeholder="Reply..."></textarea>
             <button class="inbox-button">Reply</button>
             <button class="inbox-button">Save Draft</button>
-
         </div>
     </div>
 </div>

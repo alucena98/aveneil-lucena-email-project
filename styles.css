@@ -1,6 +1,10 @@
 @media (min-width: 00px)
 {}
 
+button {
+    background-color: white;
+}
+
 /*First Column*/
     #welcome {
         display: flex;
@@ -17,78 +21,6 @@
     mark {
         background-color: rgb(131, 156, 236);
         border-radius: 15px;
-    }
-    /* User profile pic */
-    .avatar { 
-        object-fit: scale-down;
-        border-radius: 50%;
-        background-color: rgb(255, 255, 255);
-        width: 75px;
-        height: 75px;
-        margin-top: 5px;
-        margin-left: 5px;
-        margin-right: 10px;
-        }
-    .pen {
-    margin-top: -5px;
-    background: transparent;
-    width: 25px;
-    filter: 
-    invert(1); 
-    }
-
-    #sidebar {
-        font-size: 18px;
-        font-family: 'Lucida Sans', Arial, sans-serif;
-        padding: 3px;
-        margin: 15px;
-        color: white;
-    }
-
-    #sidebar:hover {
-        background-color: rgb(175, 220, 255);
-        color: rgb(17, 18, 117);
-        transition: background 0.2s ease-in-out;
-        border-radius: 15px;
-    }
-
-    .nav-column {
-    min-width: 10px;
-    justify-content: right;
-    background-color: rgb(38, 61, 134);
-    height: 100vh;
-    width: 100vh;
-    }
-
-    #sidebar {
-        cursor: pointer;
-    }
-    #message {
-        cursor: pointer;
-    }
-
-/*Second Column*/
-    .search-bar{
-        position: relative;
-        border-radius: 10px;
-        border: transparent;
-        outline: none;
-        width: calc(100% - 25px);
-        padding: 5px;
-        margin: 5%;
-    }
-    .inbox-column {
-        background-color: rgb(98, 128, 185);
-        height: 100vh;
-        width: 100vh;
-        border-left: 1px solid rgb(149, 181, 223);
-    }
-    /* Third column */
-    .email-column {
-        background-color: rgb(184, 205, 241);
-        height: 100vh;
-        width: 200vh;
-        border-left: 1px solid rgb(113, 100, 158); 
     }
 
     /* Compose button */
@@ -115,6 +47,113 @@
 
     button:focus {
             outline: transparent;
+    }
+
+    /* User profile pic */
+    .avatar { 
+        object-fit: scale-down;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        width: 35px;
+        height: 35px;
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 10px;
+        outline: #75d3ff solid 2px;
+        }
+    .pen {
+    margin-top: -5px;
+    background: transparent;
+    width: 25px;
+    filter: 
+    invert(1); 
+    }
+
+    #sidebar { /* Inbox... */
+        font-size: 18px;
+        font-family: 'Lucida Sans', Arial, sans-serif;
+        width: 100%;
+        padding: 5px;
+        color: white;
+        display: flex;
+    }
+    #quantity {
+        position: absolute;
+        pointer-events: none;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        margin-left: 71%;
+        margin-top: -31px;
+    }
+
+    #sidebar:hover {
+        position: relative;
+        background-color: rgb(106, 141, 255);
+        color: rgb(255, 255, 255);
+        transition: 0.2s ease-in-out;
+        border-top-right-radius: 30px 30px;
+        border-bottom-right-radius: 30px 30px;
+
+    }
+    #sidebar:active  {
+        background-color: rgb(68, 99, 199);
+        color:rgb(121, 121, 121);
+    }
+
+    .nav-column {
+    min-width: 10px;
+    justify-content: right;
+    background-color: rgb(38, 61, 134);
+    height: 100vh;
+    width: 100vh;
+    }
+
+    #sidebar {
+        cursor: pointer;
+    }
+    #message {
+        cursor: pointer;
+    }
+
+
+/*Second Column*/
+    .search-bar{
+        position: relative;
+        border-radius: 10px;
+        border: transparent;
+        outline: none;
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }  
+
+    .search-bar img {
+        position: absolute;
+        width: 25px;
+        top: 0px;
+        left: 100%;
+        margin-top: 25px;
+        margin-left: -45px;
+        filter:
+        invert(1)
+        brightness(4);
+        pointer-events: none
+    }
+
+    .inbox-column {
+        background-color: rgb(98, 128, 185);
+        height: 100vh;
+        width: 100vh;
+        border-left: 1px solid rgb(149, 181, 223);
+    }
+    /* Third column */
+    .email-column {
+        background-color: rgb(184, 205, 241);
+        height: 100vh;
+        width: 200vh;
+        border-left: 1px solid rgb(113, 100, 158); 
     }
 
 /*Third Column*/
