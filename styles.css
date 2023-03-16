@@ -1,6 +1,3 @@
-@media (min-width: 00px)
-{}
-
 button {
     background-color: white;
 }
@@ -211,6 +208,14 @@ button {
             brightness(4);
         pointer-events: none;
     }
+    .email-inbox {
+        border-radius: 15px;
+        background-color: rgb(212, 226, 241);
+        margin: 1px 1px;
+        padding: 8px 8px;
+        height: 75%;
+        overflow-y: auto;
+    }
 
     .inbox-column {
         background-color: rgb(61, 99, 224);     
@@ -280,19 +285,27 @@ button {
     /*Email title on select */
     .inbox-title-ur {
         font-weight: bolder;
+        font-size: 24px;
+        margin-top: -25px;
+        margin-bottom: -25px;
     }
     /*Email in inbox that is unread*/
     .inbox-message-ur {
         font-weight: bold;
+        font-size: 18px;
         background-color: rgba(124, 181, 228, 0.712);
         border-radius: 5px;
         padding: 4px;
+        cursor: pointer;
     }
     .inbox-message-ur:hover {
         background-color: rgb(215, 235, 253);
         transition: background 0.15s ease-in-out;
     }
-
+    .inbox-message-ur:active {
+        background-color: rgb(148, 168, 223);
+        transition: 0.15s ease-in-out;
+    }
     /*Email that has been read*/
     .read-email {
         background-color: transparent;
@@ -301,13 +314,20 @@ button {
         color:rgb(26, 26, 26);
         background-color: transparent;
     }
+    .inbox-message-r {
+        cursor: pointer;
+    }
     .inbox-message-r:hover {
         background-color: rgb(104, 163, 219);
         transition: 0.25s ease-in-out;
         border-radius: 5px;
     }
+    .inbox-message-r:active {
+        background-color: rgba(102, 120, 170, 0.473);
+        transition: 0.1s ease-in-out;
+    }
     /*Message within email*/
     .inbox-email {
-        font-size: 15px;
+        font-size: 16px;
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif
     }
