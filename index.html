@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -13,7 +15,6 @@
 
     <!-- https://www.tiny.cloud/blog/bootstrap-wysiwyg-editor/ -->
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-
     <script>
         tinymce.init({
             selector: 'textarea#editor',
@@ -43,6 +44,7 @@
         </div>
         </div>
 
+        
         <div class="col col-md-3 col-lg-2 nav-column"> <!-- Sidebar Column-->
             <div> <!-- Avatar div-->
                 <!-- 
@@ -50,40 +52,41 @@
                     src="https://static.wikia.nocookie.net/enajoelg/images/e/ea/Ena_talking.gif"
                     alt="ena"> 
                 <mark id="welcome">Welcome, Neil.</mark> -->
+                
             </div>
 
             <!-- Dropdown menu on minimum width, shows burger menu -->
             <button class="btn d-md-none" id="toggle-button" type="button" data-toggle="collapse" data-target="#bd-docs-nav" 
-            aria-controls="bd-docs-nav" aria-expanded="false" aria-label="toggle-nav-bar">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="40" height="50" focusable="false">
+            aria-controls="#bd-docs-nav" aria-expanded="false" aria-label="toggle-nav-bar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="50" height="50" focusable="false">
                     <title>Menu</title>
-                    <path stroke="currentColor" stroke-width="3" stroke-linecap="round" 
-                        stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22">     
+                    <path stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22">     
                     </path>
                 </svg>
             </button>
             
             <!-- First Column contents-->
             <nav class="show-and-hide-nav collapse" id="bd-docs-nav">
-            <div class="first-column-inbox" id="profile-inbox" tabindex="0">
-                <button id="compose">Compose
-                    <img class="pen" src="pen-icon.svg"
-                    alt="pen">
-                </button>
-                    <h1 id="sidebar">Inbox</h1>
-                        <h2 id="quantity">999+</h2>
-                    <h1 id="sidebar">Tagged</h1>
-                        <h2 id="quantity">0</h2>
-                    <h1 id="sidebar">Important</h1>
-                        <h2 id="quantity">5</h2>
-                    <h1 id="sidebar">Sent</h1>
-                        <h2 id="quantity">14</h2>
-                    <h1 id="sidebar">Drafts</h1>
-                        <h2 id="quantity">14</h2>
-                    <h1 id="sidebar">Trash</h1>
-                        <h2 id="quantity">374</h2>
-            </div>
+                <div class="first-column-inbox" id="profile-inbox" tabindex="0">
+                    <button id="compose">Compose
+                        <img class="pen" src="pen-icon.svg"
+                        alt="pen">
+                    </button>
+                        <h1 id="sidebar">Inbox</h1>
+                            <h2 id="quantity">999+</h2>
+                        <h1 id="sidebar">Tagged</h1>
+                            <h2 id="quantity">0</h2>
+                        <h1 id="sidebar">Important</h1>
+                            <h2 id="quantity">5</h2>
+                        <h1 id="sidebar">Sent</h1>
+                            <h2 id="quantity">14</h2>
+                        <h1 id="sidebar">Drafts</h1>
+                            <h2 id="quantity">14</h2>
+                        <h1 id="sidebar">Trash</h1>
+                            <h2 id="quantity">374</h2>
+                </div>
             </nav>
+
         </div>
 
         <!-- Second Column-->
